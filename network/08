@@ -1,0 +1,7 @@
+En utilisant la commande
+
+traceroute slash16.org
+
+je regarde tous les serveurs sur lesquels je me connecte en essayant d'acceder a ce site
+je vois une connexion a un serveur amazon
+j'en deduit avec une petite recherche que ce site est herberge par aws, les services web d'amazon

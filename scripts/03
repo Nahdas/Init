@@ -1,0 +1,42 @@
+#!/bin/bash
+clear
+sum=0
+i="y"
+
+while [ $i = "y" ]
+do
+	re='^[+-]?[0-9]+([.][0-9]+)?$'
+	echo " Entrez 1er numero "
+	read n1
+	if ! [[ $n1 =~ $re ]] ; then
+		   echo "Prend moi pour une truite, ca n'est pas un nombre" >&2; exit 1
+	fi
+	echo " Entrez 2nd numero "
+	read n2
+	if ! [[ $n2 =~ $re ]] ; then
+		   echo "Prend moi pour une truite, ca n'est pas un nombre" >&2; exit 
+	fi
+	echo "Pour une addition tapez 1"
+	echo "Pour une soustraction tapez 2"
+	echo "Pour une multiplication tapez 3"
+	echo "Pour une division tapez 4"
+	echo "C'est a vous :"
+	read ch
+	case $ch in
+		1)sum=`expr $n1 + $n2`
+			echo "$n1 + $n2 = "$sum;;
+		2)sum=`expr $n1 - $n2`
+			echo "$n1 - $n2 = "$sum;;
+		3)sum=`expr $n1 \* $n2`
+			echo "$n1 * $n2 = "$sum;;
+		4)sum=`expr $n1 / $n2`
+			echo "$n1 / $n2 = "$sum;;
+		*)echo "Nope.";;
+	esac
+	echo "On continue? (y/N)"
+	read i
+	if [ $i != "y" ]
+	then
+		exit
+	fi
+done

@@ -1,0 +1,11 @@
+creer un mot de passe pour l'utilsateur precedemment ajoute
+
+sudo passwd login
+
+se connecter avec la commande :
+
+su login
+
+Rentrer le mot de passe
+
+On est connecte !

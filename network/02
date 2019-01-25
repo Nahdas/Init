@@ -1,0 +1,13 @@
+a)
+ifconfig en0 | grep broadcast | cut -d ' ' -f6
+
+b)
+Toutes les adresses actuellement utilisees
+arp -a
+
+Mais toutes les adresse possibles sont :
+
+sachant que netmask 255.255.0.0 
+
+donc toutes adresses entre 10.12.0.0 et 10.12.255.255
+
